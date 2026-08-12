@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixly Group | Professional Handyman Services London</title>
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #1e1e2a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HEADER / TOP BAR ===== */
+        .top-bar {
+            background: #0b2b3f;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .top-bar .phone {
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        .top-bar .phone i {
+            margin-right: 8px;
+            color: #f6b83d;
+        }
+
+        .top-bar .tagline {
+            color: #cbd5e1;
+        }
+
+        /* ===== NAV ===== */
+        .navbar {
+            background: white;
+            padding: 16px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0b2b3f;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #f6b83d;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-weight: 500;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1e293b;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #f6b83d;
+        }
+
+        .nav-cta {
+            background: #f6b83d;
+            color: #0b2b3f !important;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+        .nav-cta:hover {
+            background: #e5a72e;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #0b2b3f;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 60px 0 70px;
+            background: linear-gradient(145deg, #f0f6fc 0%, #ffffff 100%);
+            border-bottom: 1px solid #e9edf2;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1 1 400px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.9rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0b2b3f;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 i {
+            color: #f6b83d;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #334155;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .hero-badge {
+            background: #d9eaf5;
+            color: #0b2b3f;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            background: #0b2b3f;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.25s;
+            border: none;
+            font-size: 1rem;
+        }
+        .btn-primary i {
+            margin-right: 8px;
+        }
+        .btn-primary:hover {
+            background: #1a3f56;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(11,43,63,0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0b2b3f;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid #0b2b3f;
+            transition: 0.25s;
+        }
+        .btn-outline:hover {
+            background: #0b2b3f;
+            color: white;
+        }
+
+        .hero-steps {
+            flex: 1 1 300px;
+            background: white;
+            padding: 30px 28px;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+        }
+
+        .step-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+        .step-num {
+            background: #f6b83d;
+            color: #0b2b3f;
+            width: 36px;
+            height: 36px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step-text h4 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+        .step-text p {
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0b2b3f;
+            margin-bottom: 12px;
+        }
+        .section-sub {
+            color: #475569;
+            max-width: 700px;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== 4 STEPS ===== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 28px 20px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #f0f2f5;
+            transition: 0.2s;
+        }
+        .step-card:hover {
+            border-color: #f6b83d;
+            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.06);
+        }
+        .step-card .num {
+            background: #eef4f9;
+            width: 48px;
+            height: 48px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #0b2b3f;
+            margin: 0 auto 16px;
+        }
+        .step-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+        .step-card p {
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        /* ===== SERVICES GRID ===== */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background: white;
+            padding: 20px 14px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #f0f2f5;
+            transition: 0.2s;
+            font-weight: 500;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+        }
+        .service-item i {
+            display: block;
+            font-size: 2rem;
+            color: #0b2b3f;
+            margin-bottom: 10px;
+        }
+        .service-item:hover {
+            border-color: #f6b83d;
+            background: #fafcfd;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 24px;
+            border: 1px solid #edf2f7;
+        }
+        .testimonial-card .stars {
+            color: #f6b83d;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+        .testimonial-card .name {
+            font-weight: 600;
+            color: #0b2b3f;
+        }
+        .testimonial-card .location {
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* ===== AREAS ===== */
+        .areas-wrapper {
+            background: #f8fafc;
+            border-radius: 32px;
+            padding: 40px 30px;
+            margin-top: 20px;
+        }
+
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            justify-content: center;
+        }
+        .areas-list span {
+            background: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            background: #0b2b3f;
+            color: white;
+            padding: 50px 30px;
+            border-radius: 40px;
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cta-banner h2 {
+            font-size: 1.9rem;
+            font-weight: 600;
+        }
+        .cta-banner .btn-primary {
+            background: #f6b83d;
+            color: #0b2b3f;
+        }
+        .cta-banner .btn-primary:hover {
+            background: #e5a72e;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0b1e2a;
+            color: #cbd5e1;
+            padding: 50px 0 30px;
+            margin-top: 40px;
+        }
+        .footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #f6b83d;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e3a4b;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 880px) {
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding-top: 20px;
+                gap: 14px;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .cta-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .top-bar .container {
+                flex-direction: column;
+                gap: 6px;
+                align-items: start;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container">
+        <div class="phone"><i class="fas fa-phone-alt"></i> <a href="tel:02034043304">020 3404 3304</a></div>
+        <div class="tagline"><i class="fas fa-check-circle" style="color:#f6b83d;"></i> Professional Handyman Services · London</div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Fixly <span>Group</span></div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Handyman</a></li>
+            <li><a href="#">Trades & Repairs</a></li>
+            <li><a href="#">Renovation</a></li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#" class="nav-cta">Book a Visit</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-star"></i> Trusted in London</div>
+            <h1>Professional Handyman Services <br><i>You Can Count On</i></h1>
+            <p>From everyday repairs and maintenance to installations and renovation projects, Fixly Group provides dependable property services for homes and businesses throughout London.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-primary"><i class="fas fa-pencil-alt"></i> Request a Job Estimate</a>
+                <a href="#" class="btn-outline"><i class="fas fa-calendar-check"></i> Book a Visit</a>
+            </div>
+        </div>
+        <div class="hero-steps">
+            <div class="step-item">
+                <div class="step-num">01</div>
+                <div class="step-text"><h4>Tell Us What You Need</h4><p>Call, request a quote, or use our AI handyman assistant.</p></div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">02</div>
+                <div class="step-text"><h4>Choose Your Appointment</h4><p>Select a convenient date and time for your visit.</p></div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">03</div>
+                <div class="step-text"><h4>We Get the Job Done</h4><p>Our team arrives prepared and completes work efficiently.</p></div>
+            </div>
+            <div style="margin-top: 16px; text-align:center;">
+                <a href="#" class="btn-primary" style="padding: 10px 26px; font-size:0.9rem;"><i class="fas fa-phone"></i> 020 3404 3304</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4 EASY STEPS -->
+<section class="section">
+    <div class="container text-center">
+        <h2 class="section-title">Book Your Handyman in 4 Easy Steps</h2>
+        <p class="section-sub mx-auto">Simple, transparent, and stress-free — get your property sorted in no time.</p>
+        <div class="steps-grid">
+            <div class="step-card"><div class="num">01</div><h4>Get in Touch</h4><p>Call or complete our online enquiry form.</p></div>
+            <div class="step-card"><div class="num">02</div><h4>Schedule Your Visit</h4><p>Choose a date and time that fits you.</p></div>
+            <div class="step-card"><div class="num">03</div><h4>Leave the Work to Us</h4><p>Skilled professionals complete your job with care.</p></div>
+            <div class="step-card"><div class="num">04</div><h4>Enjoy Peace of Mind</h4><p>Relax knowing your property is in expert hands.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES (Handyman & Trades) -->
+<section class="section" style="background:#f8fafc;">
+    <div class="container">
+        <h2 class="section-title text-center">Complete Handyman & Fitting Services</h2>
+        <p class="section-sub text-center mx-auto">Emergency handyman services in London. From odd jobs to specialist fitting — we do it all.</p>
+        <div class="service-grid">
+            <div class="service-item"><i class="fas fa-tools"></i> Odd Jobs</div>
+            <div class="service-item"><i class="fas fa-wrench"></i> Appliance Repairs</div>
+            <div class="service-item"><i class="fas fa-blind"></i> Blinds Fitting</div>
+            <div class="service-item"><i class="fas fa-tshirt"></i> Curtain Fitting</div>
+            <div class="service-item"><i class="fas fa-magic"></i> Hanging & Fitting</div>
+            <div class="service-item"><i class="fas fa-image"></i> Mirror Fitting</div>
+            <div class="service-item"><i class="fas fa-trowel"></i> Tiling Services</div>
+            <div class="service-item"><i class="fas fa-bolt"></i> Electrical Services</div>
+            <div class="service-item"><i class="fas fa-water"></i> Plumbing Services</div>
+            <div class="service-item"><i class="fas fa-couch"></i> Furniture Assembly</div>
+            <div class="service-item"><i class="fas fa-tv"></i> TV Installation</div>
+            <div class="service-item"><i class="fas fa-hammer"></i> Carpentry</div>
+            <div class="service-item"><i class="fas fa-sync-alt"></i> Floor Sanding</div>
+            <div class="service-item"><i class="fas fa-paint-roller"></i> Painting & Decorating</div>
+            <div class="service-item"><i class="fas fa-shower"></i> Bathroom Refurbishment</div>
+            <div class="service-item"><i class="fas fa-droplet"></i> Water Damage Repair</div>
+            <div class="service-item"><i class="fas fa-ruler-combined"></i> Bespoke Carpentry</div>
+            <div class="service-item"><i class="fas fa-th-large"></i> Flooring Services</div>
+        </div>
+        <div class="text-center" style="margin-top: 35px;">
+            <a href="#" class="btn-primary"><i class="fas fa-clipboard-list"></i> View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- RENOVATION -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title text-center">Professional Home Improvement & Renovation</h2>
+        <p class="section-sub text-center mx-auto">Improve your property with confidence. Bathroom refurbishment, water damage repair, painting, flooring, and bespoke carpentry.</p>
+        <div class="service-grid" style="grid-template-columns: repeat(auto-fill, minmax(160px,1fr));">
+            <div class="service-item"><i class="fas fa-bath"></i> Bathroom Refurbishment</div>
+            <div class="service-item"><i class="fas fa-tint"></i> Water Damage Repair</div>
+            <div class="service-item"><i class="fas fa-paint-bucket"></i> Painting & Decorating</div>
+            <div class="service-item"><i class="fas fa-archive"></i> Flooring Services</div>
+            <div class="service-item"><i class="fas fa-chair"></i> Bespoke Carpentry</div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:#f8fafc;">
+    <div class="container">
+        <h2 class="section-title text-center">Trusted by Customers Across London</h2>
+        <p class="section-sub text-center mx-auto">⭐ 5‑Star Service · What our clients say about us.</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Fantastic service from start to finish! The team fixed all my odd jobs and even helped with a tricky shelf installation. Highly recommended.”</p><div class="name">Emma</div><div class="location">Islington</div></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p>“HSL Handyman Service London refurbished our bathroom beautifully. Professional, punctual, and very friendly team.”</p><div class="name">James</div><div class="location">Clapham</div></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p>“From painting to floor sanding, they handled our home improvements perfectly. Friendly, efficient, and reliable.”</p><div class="name">Liam</div><div class="location">Battersea</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE + BENEFITS -->
+<section class="section">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 30px;">
+            <div><h3><i class="fas fa-shield-alt" style="color:#f6b83d;"></i> Skilled & Fully Insured</h3><p>Our experienced team is equipped to handle a wide range of repairs, installations, and maintenance.</p></div>
+            <div><h3><i class="fas fa-clock" style="color:#f6b83d;"></i> Reliable & Punctual</h3><p>We respect your time and aim to arrive as scheduled and complete each job efficiently.</p></div>
+            <div><h3><i class="fas fa-pound-sign" style="color:#f6b83d;"></i> Transparent & Fair Pricing</h3><p>Clear pricing before work begins — no hidden fees or surprises.</p></div>
+            <div><h3><i class="fas fa-smile" style="color:#f6b83d;"></i> Customer-Focused</h3><p>We listen to your needs and tailor our approach to your property and project.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- AREAS WE SERVE -->
+<section class="section" style="background:#f8fafc;">
+    <div class="container">
+        <h2 class="section-title text-center">Areas We Serve Across London</h2>
+        <div class="areas-wrapper">
+            <div class="areas-list">
+                <span>Islington</span><span>Wimbledon</span><span>Wembley</span><span>Clapham</span><span>Ealing</span>
+                <span>Putney</span><span>Wandsworth</span><span>Fulham</span><span>Battersea</span><span>Kensington</span>
+                <span>Chiswick</span><span>Brixton</span><span>Streatham</span><span>Harrow</span><span>Croydon</span>
+                <span>Bromley</span><span>Enfield</span><span>Romford</span><span>Knightsbridge</span><span>Richmond</span>
+                <span>Greenwich</span><span>Angel</span><span>Balham</span><span>Hackney</span><span>Walthamstow</span>
+                <span>Tooting</span><span>Mitcham</span><span>Camden</span><span>Barking</span><span>Canary Wharf</span>
+                <span>Hammersmith</span><span>Twickenham</span><span>Edmonton</span><span>Chelmsford</span><span>Chelsea</span>
+                <span>Acton</span><span>Orpington</span><span>Barnet</span><span>Lewisham</span><span>Southend</span>
+                <span>Pimlico</span><span>Wokingham</span><span>Watford</span><span>Hampstead Heath</span><span>Ilford</span>
+                <span>Kilburn</span><span>High Wycombe</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="container">
+    <div class="cta-banner">
+        <div><h2>Ready to get started?</h2><p style="opacity:0.9;">Call us or request a free estimate today.</p></div>
+        <div>
+            <a href="#" class="btn-primary" style="background:#f6b83d; color:#0b2b3f; margin-right: 12px;"><i class="fas fa-phone"></i> 020 3404 3304</a>
+            <a href="#" class="btn-primary" style="background:white; color:#0b2b3f;">Book a Visit</a>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><h4>Fixly Group</h4><ul><li><a href="#">Home</a></li><li><a href="#">Property Maintenance</a></li><li><a href="#">Handyman Services</a></li><li><a href="#">Trades & Repairs</a></li><li><a href="#">Renovation</a></li><li><a href="#">Prices</a></li></ul></div>
+            <div><h4>Services</h4><ul><li><a href="#">Appliance Repairs</a></li><li><a href="#">Bathroom Refurbishment</a></li><li><a href="#">Bespoke Carpentry</a></li><li><a href="#">Blinds Fitting</a></li><li><a href="#">Carpentry Services</a></li><li><a href="#">Curtain Fitting</a></li></ul></div>
+            <div><h4>More</h4><ul><li><a href="#">Electrical Services</a></li><li><a href="#">Floor Sanding</a></li><li><a href="#">Flooring Services</a></li><li><a href="#">Furniture Assembly</a></li><li><a href="#">Plumbing Services</a></li><li><a href="#">Tiling Services</a></li></ul></div>
+            <div><h4>Contact</h4><ul><li><a href="tel:02034043304">020 3404 3304</a></li><li><a href="#">Request a Job Estimate</a></li><li><a href="#">Book a Visit</a></li><li><a href="#">Terms & Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025–2026 Fixly Group. All Rights Reserved.</span>
+            <span>Opening Hours: Mon–Sat 9:00 AM – 8:00 PM</span>
+        </div>
+    </div>
+</footer>
+
+<!-- HAMBURGER TOGGLE -->
+<script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
