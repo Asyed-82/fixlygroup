@@ -535,7 +535,7 @@
       gap: 8px;
     }
 
-    /* ===== PAINT BUCKET ANIMATION - FULLY TRANSPARENT ===== */
+    /* ===== PAINT BUCKET ANIMATION - PNG VERSION ===== */
     .fixly-paint-animation {
       position: relative;
       width: 100%;
@@ -550,15 +550,8 @@
       height: auto;
       display: block;
       background: transparent !important;
+      background-color: transparent !important;
       mix-blend-mode: normal;
-      /* Remove any white background from the image itself */
-      -webkit-mask-image: none;
-      mask-image: none;
-    }
-
-    /* Override any background that might be applied by the image */
-    .fixly-paint-image[src*="fixlygrouppaintbucket"] {
-      background: transparent !important;
     }
 
     /* Moving reflection makes the paint appear to flow */
@@ -653,28 +646,33 @@
       }
     }
 
-    /* Mobile - ensure transparency on all devices */
-    @media (max-width: 600px) {
+    /* Mobile - PNG handles transparency natively */
+    @media (max-width: 768px) {
       .fixly-paint-animation {
         max-width: 280px;
         background: transparent !important;
+      }
+
+      .fixly-paint-image {
+        background: transparent !important;
+        background-color: transparent !important;
       }
 
       .paint-drop {
         width: 6px;
         height: 6px;
       }
+    }
+
+    @media (max-width: 480px) {
+      .fixly-paint-animation {
+        max-width: 220px;
+        background: transparent !important;
+      }
 
       .fixly-paint-image {
         background: transparent !important;
-        mix-blend-mode: normal;
-      }
-    }
-
-    /* Extra small devices */
-    @media (max-width: 450px) {
-      .fixly-paint-animation {
-        max-width: 220px;
+        background-color: transparent !important;
       }
     }
 
@@ -847,10 +845,10 @@
           <a href="#" class="btn-outline"><i class="fas fa-pencil-alt"></i> Get a Free Quote</a>
         </div>
 
-        <!-- ANIMATED PAINT BUCKET - FULLY TRANSPARENT -->
+        <!-- ANIMATED PAINT BUCKET - NOW USING PNG -->
         <div class="fixly-paint-animation" style="margin-top: 30px; max-width: 280px;">
           <img
-            src="https://raw.githubusercontent.com/Asyed-82/fixlygroup/main/fixlygrouppaintbucket.jpeg"
+            src="https://raw.githubusercontent.com/Asyed-82/fixlygroup/main/fixlygrouppaintbucket.png"
             alt="Fixly Group"
             class="fixly-paint-image"
           />
